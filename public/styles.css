@@ -1,0 +1,139 @@
+:root {
+  --primary: #2ca18c;
+  --primary-dark: #c14364;
+  --accent: #ff916b;
+  --bg: #eee2d1;
+  --danger: #c14364;
+  --danger-hover: #ff916b;
+  --table-header: #2ca18c;
+  --table-header-text: #fff;
+  --input-border: #ff916b;
+  --input-bg: #eee2d1;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg);
+  max-width: 40vw;
+  margin: 0 auto;
+}
+
+#version {
+  margin-top: 2rem;
+}
+
+button {
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 161, 140, 0.1);
+}
+
+button:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 16px rgba(193, 67, 100, 0.15);
+}
+
+button.add-dog {
+  background: var(--primary);
+  color: #fff;
+  font-weight: bold;
+}
+
+button.x {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  margin-left: 0.5rem;
+  transition: background 0.2s;
+}
+
+button.x:hover {
+  background: var(--danger-hover);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 161, 140, 0.05);
+}
+
+thead {
+  background: var(--table-header);
+}
+
+thead th {
+  color: var(--table-header-text);
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--bg);
+}
+
+form {
+  background: #fff;
+  padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 4px rgba(44, 161, 140, 0.05);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+form * {
+  box-sizing: border-box;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+form label {
+  font-weight: 500;
+  color: var(--danger);
+  margin-bottom: 0;
+  font-size: 0.93rem;
+  min-width: 60px;
+}
+
+form input[type='text'] {
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.22rem;
+  font-size: 0.93rem;
+  background: var(--input-bg);
+  transition: border 0.2s;
+  flex: 1;
+}
+
+form input[type='text']:focus {
+  border: 1.2px solid var(--primary);
+  outline: none;
+  background: #fff;
+}
+
+form button[type='submit'] {
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  padding: 0.4rem 1rem;
+}
